@@ -1,0 +1,12 @@
+.createDialog {
+    line-height: 50px;
+    padding-left: 30px;
+    margin: 30px 3px 3px 3px;
+    border: 1px solid #bbc9c8;
+    border-radius: 3px;
+}
+.createDialog:hover {
+    cursor: pointer;
+    background-color:#f5f5f5 ;
+    transition: ease-in-out 0.5s;
+}

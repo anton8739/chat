@@ -1,0 +1,46 @@
+.h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.logForm {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media (max-width: 800px) {
+    .logForm {
+        width: 90%;
+    }
+}
+.authError {
+    display: block;
+    text-align:  center;
+    color: #E57373;
+    margin-bottom: 20px;
+}
+
+.btnReg {
+    display: block;
+    background-color: #00aea8;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 15px 5px 15px;
+    align-self: center;
+}
+.btnReg:hover {
+    cursor: pointer;
+}

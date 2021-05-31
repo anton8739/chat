@@ -1,0 +1,16 @@
+.message {
+    background-color: #abd1fd;
+    display: block;
+    width: 30%;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 10px;
+    justify-self: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}

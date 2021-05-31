@@ -1,0 +1,54 @@
+version: '3.3'
+services:
+    backend-java:
+      container_name: backend
+      build: .
+      image: backend
+      depends_on:
+        -  db-postgres
+      restart: always
+      ports:
+      - 8080:8080
+      environment:
+         spring.datasource.url: "jdbc:postgresql://172.27.128.2:5432/chat"
+         spring.datasource.password: "postgres"
+         cors.allowed.origin: "http://172.27.0.1:3000"
+      networks:
+            static-network:
+              ipv4_address: 172.27.128.1
+
+    frontend-react:
+      container_name: frontend
+      build: ../chat_frontend/.
+      image: frontend
+      depends_on:
+        - db-postgres
+      restart: always
+      ports:
+          - 3000:3000
+      environment:
+        REACT_APP_API_URL: "172.27.128.1"
+
+      networks:
+        static-network:
+          ipv4_address: 172.27.128.3
+
+    db-postgres:
+      container_name: postgres
+      image: postgres:10
+
+      restart: always
+      environment:
+          POSTGRES_PASSWORD: postgres
+      volumes:
+          - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+      ports:
+            - 54320:5432
+      networks:
+            static-network:
+              ipv4_address: 172.27.128.2
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.27.0.0/16

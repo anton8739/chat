@@ -1,0 +1,39 @@
+.item {
+    display: grid;
+    grid-template-areas: 'img user_name' 'img last_message';
+    grid-template-columns: 100px 1fr;
+    border: 1px solid #bbc9c8;
+    text-decoration: none;
+    color: #333333;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 3px;
+}
+.item:hover {
+    background-color:#f5f5f5 ;
+    border: 1px solid #007fff;
+    color: #333333;
+    transition: ease-in-out 0.5s;
+}
+.user_name {
+    grid-area: user_name;
+    font-size: 16px;
+    font-weight: 700;
+}
+.last_message {
+ grid-area: last_message;
+    font-size: 14px;
+    font-weight: 400;
+}
+.img {
+    grid-area: img;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;;
+}
+.unread {
+    background-color: #e3ebf1;
+}
+.unread:hover {
+    background-color: #e3ebf1;
+}
