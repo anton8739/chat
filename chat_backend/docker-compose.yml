@@ -22,6 +22,7 @@ services:
       build: ../chat_frontend/.
       image: frontend
       depends_on:
+        - backend-java
         - db-postgres
       restart: always
       ports:
